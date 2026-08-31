@@ -1,0 +1,35 @@
+# Technical Design Document: SpencerMatosky_ProgrammingExercise_1
+
+# Name: Spencer Matosky
+# Date: August 30, 2026
+# Program Description: An application that sells a limited number of tickets and limits to 4 tickets per buyer.
+
+## Function: display_purchase_summary
+Display a summary of a single buyer's purchase.
+
+Args:
+    buyer_number (int): the sequential number of this buyer (1st, 2nd, ...).
+    tickets_bought (int): number of tickets this buyer purchased.
+    remaining_tickets (int): number of tickets left after the purchase.
+
+Returns:
+    None
+
+## Function: get_ticket_request
+Prompt the user (buyer) for the number of tickets they want to buy.
+
+Keeps asking until a valid whole number is entered that is:
+  - at least 1
+  - no more than MAX_TICKETS_PER_BUYER
+  - no more than the number of tickets still remaining
+
+Args:
+    remaining_tickets (int): number of tickets still available to sell.
+
+Returns:
+    int: a validated number of tickets the buyer wishes to purchase.
+
+## Function: main
+Run the cinema ticket pre-sale program from start to finish.
+
+#Link to your repository: https://github.com/smatosky/COP2373_2026_SM
