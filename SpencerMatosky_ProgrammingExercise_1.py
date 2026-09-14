@@ -36,7 +36,7 @@ def get_ticket_request(remaining_tickets):
         # Get raw input from the user and attempt to convert to an integer
         raw_input_value = input(
             f"Tickets remaining: {remaining_tickets}. "
-            f"How many tickets would you like to buy "
+            f"Only 10 tickets available! How many would you like? "
             f"(1-{min(MAX_TICKETS_PER_BUYER, remaining_tickets)})? "
         )
 
