@@ -87,25 +87,25 @@ def main():
     print(f"{TOTAL_TICKETS_AVAILABLE} tickets are available.\n")
 
     # Accumulators: track running totals as the sale progresses
-    tickets_sold = 0
+    total_tickets_sold = 0
     buyer_count = 0
 
     # Main sales loop - continues until every ticket has been sold
-    while tickets_sold < TOTAL_TICKETS_AVAILABLE:
-        tickets_remaining = TOTAL_TICKETS_AVAILABLE - tickets_sold
+    while total_tickets_sold < TOTAL_TICKETS_AVAILABLE:
+        tickets_remaining = TOTAL_TICKETS_AVAILABLE - total_tickets_sold
 
         # Get a validated ticket request from the current buyer
         requested_tickets = get_ticket_request(tickets_remaining)
 
         # Update accumulators with this buyer's purchase
-        tickets_sold += requested_tickets
+        total_tickets_sold += requested_tickets
         buyer_count += 1
 
         # Show the buyer a summary of their purchase and tickets left
         display_purchase_summary(
             buyer_count,
             requested_tickets,
-            TOTAL_TICKETS_AVAILABLE - tickets_sold,
+            TOTAL_TICKETS_AVAILABLE - total_tickets_sold,
         )
 
     # All tickets have been sold - report final totals
