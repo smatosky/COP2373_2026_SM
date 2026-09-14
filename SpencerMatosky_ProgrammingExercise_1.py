@@ -13,7 +13,7 @@ program displays the total number of buyers who purchased tickets.
 MAX_TICKETS_PER_BUYER = 4
 
 # Total number of tickets available for the entire pre-sale
-TOTAL_TICKETS_AVAILABLE = 20
+TOTAL_TICKETS_AVAILABLE = 10
 
 
 def get_ticket_request(remaining_tickets):
